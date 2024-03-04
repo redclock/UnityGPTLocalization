@@ -32,12 +32,5 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
-proj.ios
-Assets/Plugins/iOS/Admob/GoogleMobileAds.framework
-Assets/Editor/Vungle/VungleSDK/VungleSDK.framework
-proj.android
-fightTable/node_modules
-fightTable/.idea
-~$table.xlsx
 .idea
 *.symbols.zip
