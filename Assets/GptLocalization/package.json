@@ -1,0 +1,23 @@
+{
+  "name": "com.redgame.gpt-localization",
+  "version": "0.1.0",
+  "displayName": "GPT Localization",
+  "description": "A Unity tool combining Localization and ChatGPT for easy multilingual translation using OpenAI API. Control translation quality with Localization comments.",
+  "unity": "2020.3",
+  "unityRelease": "0f1",
+  "dependencies": {
+    "com.unity.nuget.newtonsoft-json": "3.2.1",
+    "com.unity.localization": "1.4.5"
+  },
+  "keywords": [
+    "openai",
+    "chatgpt",
+    "localization",
+    "ai",
+    "translate"
+  ],
+  "author": {
+    "name": "Yao Chunhui",
+    "url": "https://github.com/redclock"
+  }
+}
