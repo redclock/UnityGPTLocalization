@@ -59,7 +59,11 @@ namespace RedGame.Framework.EditorTools
             if (_pendingRecs != null && _currentPendingRecIndex < _pendingRecs.Length)
             {
                 var rec = _pendingRecs[_currentPendingRecIndex];
-                OnTaskCompleted(_task, rec);
+                if (!OnTaskCompleted(_task, rec))
+                {
+                    CancelTask();
+                    return;
+                }
                 _taskDuration = Time.realtimeSinceStartup - _taskStartTime;
                 
                 if (_currentPendingRecIndex < _pendingRecs.Length - 1)
@@ -69,9 +73,12 @@ namespace RedGame.Framework.EditorTools
                     _taskStartTime = Time.realtimeSinceStartup;
                 } else
                 {
+                    Output("Translation completed:\n" + 
+                           string.Join("\n", _pendingRecs.Select((rec) => rec.key)), OutputType.Info);
                     _task = null;
                     _pendingRecs = null;
                     RefreshRecords();
+                    
                 }
             }
         }

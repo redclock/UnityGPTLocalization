@@ -9,7 +9,7 @@ namespace RedGame.Framework.EditorTools
     {
         enum OutputType
         {
-            None, Prompt, Error, 
+            None, Prompt, Error, Info
         }
         
         private SimpleEditorTableView<TranslateRec> _tableView;
@@ -155,14 +155,25 @@ namespace RedGame.Framework.EditorTools
             if (_gptFoldout)
             {
                 EditorGUI.indentLevel++;
-                EditorGUI.BeginChangeCheck();
                 EditorGUILayout.BeginVertical("Box");
                 _baseUrl = EditorGUILayout.TextField("Base URL", _baseUrl);
                 if (string.IsNullOrEmpty(_baseUrl))
                     _baseUrl = DEFAULT_BASE_URL;
                 
                 _apiKey = EditorGUILayout.PasswordField("API Key", _apiKey);
-            
+                if (!IsValidOpenAIKey(_apiKey))
+                {
+                    GUIStyle style = new GUIStyle(EditorStyles.helpBox)
+                    {
+                        richText = true
+                    };
+                    EditorGUILayout.BeginHorizontal();
+                    EditorGUI.indentLevel--;
+                    GUILayout.Space(EditorGUIUtility.labelWidth);
+                    EditorGUILayout.LabelField("<color=#ff4444>Please enter a valid OpenAI API Key.</color>", style);
+                    EditorGUI.indentLevel++;
+                    EditorGUILayout.EndHorizontal();
+                }
                 int index = Array.IndexOf(_validModels, _model);
                 index = EditorGUILayout.Popup("Model", index, _validModels);
                 if (index >= 0 && index < _validModels.Length)
@@ -224,7 +235,14 @@ namespace RedGame.Framework.EditorTools
             if (!string.IsNullOrEmpty(_outputStr) && _outputType != OutputType.None)
             {
                 EditorGUILayout.Space();
+                EditorGUILayout.BeginHorizontal();
                 EditorGUILayout.LabelField(_outputType.ToString(), EditorStyles.boldLabel);
+                if (GUILayout.Button("Clear", GUILayout.Width(100)))
+                {
+                    _outputStr = string.Empty;
+                    _outputType = OutputType.None;
+                }
+                EditorGUILayout.EndHorizontal();
                 EditorGUILayout.Space();
                 if (_outputType == OutputType.Error)
                 {
@@ -286,6 +304,12 @@ namespace RedGame.Framework.EditorTools
             _tableView ??= CreateTable();
             _tableView.DrawTableGUI(_recs, (_recs.Length + 2) * EditorGUIUtility.singleLineHeight);
         }
-        
+
+
+        private bool IsValidOpenAIKey(string key)
+        {
+            var apiKeyPattern = @"^sk-\w{32,}$";
+            return System.Text.RegularExpressions.Regex.IsMatch(key, apiKeyPattern);
+        }
     }
 }

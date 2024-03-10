@@ -13,8 +13,45 @@ MonoBehaviour:
   m_Name: TestStringCollection Shared Data
   m_EditorClassIdentifier: 
   m_TableCollectionName: TestStringCollection
-  m_TableCollectionNameGuidString: 00000000000000000000000000000000
-  m_Entries: []
+  m_TableCollectionNameGuidString: 88630988c8f454fdab8f154122f4ee1f
+  m_Entries:
+  - m_Id: 312839495680
+    m_Key: Purchase Coin
+    m_Metadata:
+      m_Items: []
+  - m_Id: 384956358656
+    m_Key: Comfirm
+    m_Metadata:
+      m_Items:
+      - rid: 8165320892143370274
+  - m_Id: 426811318272
+    m_Key: Purchase Coin Message
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1920776265728
+    m_Key: Dialog1
+    m_Metadata:
+      m_Items:
+      - rid: 8165320892143370276
+  - m_Id: 7949354262528
+    m_Key: Dialog2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8169811075072
+    m_Key: Dialog3
+    m_Metadata:
+      m_Items:
+      - rid: 8165320892143370277
+  - m_Id: 8516319305728
+    m_Key: New Entry
+    m_Metadata:
+      m_Items:
+      - rid: 8165320892143370278
+  - m_Id: 16990793097216
+    m_Key: New Entry 1
+    m_Metadata:
+      m_Items:
+      - rid: 8165320892143370281
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
@@ -26,3 +63,25 @@ MonoBehaviour:
       type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
       data:
         m_CustomEpoch: 1709541371502
+    - rid: 8165320892143370274
+      type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_CommentText: The text in a button to confirm purchasing, should be short
+          as possible
+    - rid: 8165320892143370276
+      type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_CommentText: Translate into the target language's ancient dialect.
+    - rid: 8165320892143370277
+      type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_CommentText: Translate into the target language's ancient dialect.
+    - rid: 8165320892143370278
+      type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_CommentText: 
+    - rid: 8165320892143370281
+      type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_CommentText: do not translate "Native Bridge"; keep this term in its original
+          English form.

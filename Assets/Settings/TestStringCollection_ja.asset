@@ -17,7 +17,39 @@ MonoBehaviour:
   m_SharedData: {fileID: 11400000, guid: 88630988c8f454fdab8f154122f4ee1f, type: 2}
   m_Metadata:
     m_Items: []
-  m_TableData: []
+  m_TableData:
+  - m_Id: 312839495680
+    m_Localized: "\u30B3\u30A4\u30F3\u3092\u8CFC\u5165\u3059\u308B"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 384956358656
+    m_Localized: "\u78BA\u8A8D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 426811318272
+    m_Localized: "{100}\u30B3\u30A4\u30F3\u3092\u8CFC\u5165\u3057\u307E\u3059\u304B\uFF1F"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1920776265728
+    m_Localized: 
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7949354262528
+    m_Localized: "\u79C1\u3001{0}"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8169811075072
+    m_Localized: "\u6BBF\u3001\u306A\u305C\u3053\u306E\u3088\u3046\u306B\u306A\u3055\u3063\u305F\uFF1F\u8D77\u304D\u3066\u304F\u3060\u3055\u3044"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8516319305728
+    m_Localized: "\u5929\u5BAE\u53F7\u30ED\u30DC\u30C3\u30C8\u306E\u30C6\u30B9\u30C8"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16990793097216
+    m_Localized: "\u30C6\u30B9\u30C8 Native Bridge"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

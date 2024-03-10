@@ -16,8 +16,46 @@ MonoBehaviour:
     m_Code: zh-Hans
   m_SharedData: {fileID: 11400000, guid: 88630988c8f454fdab8f154122f4ee1f, type: 2}
   m_Metadata:
-    m_Items: []
-  m_TableData: []
+    m_Items:
+    - rid: 8165320892143370286
+  m_TableData:
+  - m_Id: 312839495680
+    m_Localized: "\u8D2D\u4E70\u91D1\u5E01"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 384956358656
+    m_Localized: "\u786E\u8BA4"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 426811318272
+    m_Localized: "\u4F60\u786E\u8BA4\u8D2D\u4E70{100}\u91D1\u5E01\u5417\uFF1F"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1920776265728
+    m_Localized: "\u5BF9\u9762\u4F55\u4EBA\uFF1F"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7949354262528
+    m_Localized: "\u5728\u4E0B{0}"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8169811075072
+    m_Localized: "\u5148\u751F\u4F55\u81F3\u5982\u6B64\uFF1F\u8BF7\u8D77"
+    m_Metadata:
+      m_Items:
+      - rid: 8165320892143370286
+  - m_Id: 8516319305728
+    m_Localized: "\u6D4B\u8BD5\u5929\u5BAB\u53F7\u673A\u5668\u4EBA"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16990793097216
+    m_Localized: "\u6D4B\u8BD5 Native Bridge"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 8165320892143370286
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 00e0af2e6e070000
