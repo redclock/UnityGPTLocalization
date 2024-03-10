@@ -36,19 +36,15 @@ MonoBehaviour:
   - m_Id: 7949354262528
     m_Key: Dialog2
     m_Metadata:
-      m_Items: []
-  - m_Id: 8169811075072
-    m_Key: Dialog3
-    m_Metadata:
       m_Items:
-      - rid: 8165320892143370277
+      - rid: 8165320897239187460
   - m_Id: 8516319305728
-    m_Key: New Entry
+    m_Key: SpaceFire
     m_Metadata:
       m_Items:
       - rid: 8165320892143370278
   - m_Id: 16990793097216
-    m_Key: New Entry 1
+    m_Key: TestNatieBridge
     m_Metadata:
       m_Items:
       - rid: 8165320892143370281
@@ -72,16 +68,17 @@ MonoBehaviour:
       type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
         m_CommentText: Translate into the target language's ancient dialect.
-    - rid: 8165320892143370277
-      type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
-      data:
-        m_CommentText: Translate into the target language's ancient dialect.
     - rid: 8165320892143370278
       type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
-        m_CommentText: 
+        m_CommentText: " interpreting \"\u5929\u5BAB\" creatively to fit cultural
+          or linguistic nuances rather than using transliteration."
     - rid: 8165320892143370281
       type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
         m_CommentText: do not translate "Native Bridge"; keep this term in its original
           English form.
+    - rid: 8165320897239187460
+      type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_CommentText: Translate into the target language's ancient dialect.

@@ -16,7 +16,8 @@ MonoBehaviour:
     m_Code: en
   m_SharedData: {fileID: 11400000, guid: 88630988c8f454fdab8f154122f4ee1f, type: 2}
   m_Metadata:
-    m_Items: []
+    m_Items:
+    - rid: 8165320897239187458
   m_TableData:
   - m_Id: 312839495680
     m_Localized: Purchase coins
@@ -27,34 +28,30 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 426811318272
-    m_Localized: Are you sure you want to purchase {100} coins?
+    m_Localized: Are you sure you want to purchase {count} coins?
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 8165320897239187458
   - m_Id: 1920776265728
-    m_Localized: Who goes there?
+    m_Localized: Who is that person across?
     m_Metadata:
       m_Items: []
   - m_Id: 7949354262528
-    m_Localized: I, {0}
+    m_Localized: I am Zhao Zilong from Changshan.
     m_Metadata:
       m_Items: []
-  - m_Id: 8169811075072
-    m_Localized: Why, good sir, hath thou fallen so low? Pray, rise and shine!
-    m_Metadata:
-      m_Items:
-      - rid: 8165320892143370279
   - m_Id: 8516319305728
-    m_Localized: Testing the Heavenly Palace robot
+    m_Localized: Heavenly Palace Robot launched! 3..2..1..
     m_Metadata:
       m_Items: []
   - m_Id: 16990793097216
-    m_Localized: Test NativBridge
+    m_Localized: Test Native Bridge
     m_Metadata:
       m_Items: []
   references:
     version: 2
     RefIds:
-    - rid: 8165320892143370279
-      type: {class: Comment, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+    - rid: 8165320897239187458
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
-        m_CommentText: Translate with a humorous tone.
+        m_Entries: 00e0ef5f63000000
