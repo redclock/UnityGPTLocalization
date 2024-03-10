@@ -58,6 +58,8 @@ namespace RedGame.Framework.EditorTools
         {
             _outputStr = str;
             _outputType = type;
+            if (type == OutputType.Error)
+                Debug.LogError(str);
         }
 
         private void UpdateFrame()

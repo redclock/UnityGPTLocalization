@@ -37,7 +37,6 @@ namespace RedGame.Framework.EditorTools
                 key = key, selected = true
             };
             
-            sb.Append("Translate the following texts:\n");
             var tables = collection.StringTables;
             rec.srcTables = new List<StringTable>();
             rec.dstTables = new List<StringTable>();
@@ -50,12 +49,15 @@ namespace RedGame.Framework.EditorTools
                     rec.dstTables.Add(table);
                     continue;
                 }
-
-                string langName = table.LocaleIdentifier.CultureInfo.EnglishName;
+                
                 rec.srcTables.Add(table);
-                if (rec.srcTables.Count <= 2)
+                if (rec.srcTables.Count <= 1)
                 {
-                    sb.Append("## From " + langName + ":\n" + entry.Value + "\n");
+                    sb.Append("Translate from ");
+                    sb.Append(table.LocaleIdentifier.CultureInfo.EnglishName);
+                    sb.Append(":\n");
+                    sb.Append(entry.Value);
+                    sb.Append("\n");
                 }
             }
 
@@ -128,7 +130,7 @@ namespace RedGame.Framework.EditorTools
             });
         }
 
-        private void OnTaskCompleted(Task<CreateChatCompletionResponse> task, TranslateRec rec)
+        private bool OnTaskCompleted(Task<CreateChatCompletionResponse> task, TranslateRec rec)
         {
             if (task.IsFaulted)
             {
@@ -136,16 +138,18 @@ namespace RedGame.Framework.EditorTools
                 {
                     Output(task.Exception.Message, OutputType.Error);
                     Debug.LogError(task.Exception);
+                } else
+                {
+                    Output("Task Unknown Error", OutputType.Error);
                 }
-                return;
+                return false;
             }
 
             var response = task.Result;
             if (response.Error != null)
             {
                 Output(response.Error.Message, OutputType.Error);
-                Debug.LogError(response.Error.Message);
-                return;
+                return false;
             }
 
             string answer = response.Choices[0].Message.Content;
@@ -159,10 +163,12 @@ namespace RedGame.Framework.EditorTools
             } else
             {
                 Output("Failed to parse response as json object:\n" + answer, OutputType.Error);
-                Debug.LogError("Failed to parse response as json object");
+                return false;
             }
             
-            Output("", OutputType.None);
+            //Output(answer, OutputType.Info);
+
+            return true;
         }
 
         private string TryParseText(JToken json)
