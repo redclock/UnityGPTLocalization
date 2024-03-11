@@ -268,9 +268,8 @@ namespace RedGame.Framework.EditorTools
 
             if (_recs == null || _recs.Length == 0)
             {
-                EditorGUILayout.HelpBox("No Entry to translate.\n" +
-                                        "Only entries with partial language translations are displayed here.\n" +
-                                        "Edit entries in Localization Table Editor and press [Refresh List] button",
+                EditorGUILayout.HelpBox("No entry to translate.\n" +
+                                        "Only entries that are partially localized will appear here.",
                     MessageType.Warning);
                 return;
             }
