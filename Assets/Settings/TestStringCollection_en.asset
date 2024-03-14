@@ -20,32 +20,32 @@ MonoBehaviour:
     - rid: 8165320897239187458
   m_TableData:
   - m_Id: 312839495680
-    m_Localized: Purchase coins
+    m_Localized: 
     m_Metadata:
       m_Items: []
   - m_Id: 384956358656
-    m_Localized: Confirm
+    m_Localized: 
     m_Metadata:
       m_Items: []
   - m_Id: 426811318272
-    m_Localized: Are you sure you want to purchase {count} coins?
+    m_Localized: 
     m_Metadata:
       m_Items:
       - rid: 8165320897239187458
   - m_Id: 1920776265728
-    m_Localized: Who is that person across?
+    m_Localized: 
     m_Metadata:
       m_Items: []
   - m_Id: 7949354262528
-    m_Localized: I am Zhao Zilong from Changshan.
+    m_Localized: 
     m_Metadata:
       m_Items: []
   - m_Id: 8516319305728
-    m_Localized: Heavenly Palace Robot launched! 3..2..1..
+    m_Localized: 
     m_Metadata:
       m_Items: []
   - m_Id: 16990793097216
-    m_Localized: Test Native Bridge
+    m_Localized: 
     m_Metadata:
       m_Items: []
   references:

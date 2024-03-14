@@ -20,32 +20,32 @@ MonoBehaviour:
     - rid: 8165320897239187469
   m_TableData:
   - m_Id: 312839495680
-    m_Localized: "Acheter des pi\xE8ces"
+    m_Localized: 
     m_Metadata:
       m_Items: []
   - m_Id: 384956358656
-    m_Localized: Confirmer
+    m_Localized: 
     m_Metadata:
       m_Items: []
   - m_Id: 426811318272
-    m_Localized: "\xCAtes-vous s\xFBr de vouloir acheter {count} pi\xE8ces?"
+    m_Localized: 
     m_Metadata:
       m_Items:
       - rid: 8165320897239187469
   - m_Id: 1920776265728
-    m_Localized: Qui est cette personne en face ?
+    m_Localized: 
     m_Metadata:
       m_Items: []
   - m_Id: 7949354262528
-    m_Localized: Je suis Zhao Zilong de Changshan.
+    m_Localized: 
     m_Metadata:
       m_Items: []
   - m_Id: 8516319305728
-    m_Localized: "Lancement du robot du Palais C\xE9leste ! 3..2..1.."
+    m_Localized: 
     m_Metadata:
       m_Items: []
   - m_Id: 16990793097216
-    m_Localized: Tester Native Bridge
+    m_Localized: 
     m_Metadata:
       m_Items: []
   references:
