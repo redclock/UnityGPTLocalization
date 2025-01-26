@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
@@ -6,7 +9,7 @@ namespace RedGame.Framework.EditorTools
     public partial class LocalizeGptWindow : EditorWindow
     {
         private string _model = "gpt-3.5-turbo";
-        private readonly string[] _validModels =
+        private static string[] s_validModels = 
         {
             "gpt-3.5-turbo", 
             "gpt-4-turbo-preview",
@@ -15,12 +18,22 @@ namespace RedGame.Framework.EditorTools
             "gpt-3.5-turbo-0125",
             "gpt-3.5-turbo-1106",
             "gpt-4o"
+            "deepseek-chat",
+            "deepseek-reasoner",
         };
         
         private float _temperature;
         private string _apiKey;
         private const string DEFAULT_BASE_URL = "https://api.openai.com/v1";
         private string _baseUrl = DEFAULT_BASE_URL;
+
+        public static void AddModel(string modelName)
+        {
+            if (s_validModels.Contains(modelName))
+                return;
+            
+            s_validModels = s_validModels.Append(modelName).ToArray();
+        }
         
         [MenuItem("Tools/GPT Localization")]
         private static void ShowWindow()
