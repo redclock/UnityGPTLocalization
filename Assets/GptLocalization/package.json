@@ -1,6 +1,6 @@
 {
   "name": "com.redgame.gpt-localization",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "displayName": "GPT Localization",
   "description": "A Unity tool combining Localization and ChatGPT for easy multilingual translation using OpenAI API. Control translation quality with Localization comments.",
   "unity": "2020.3",
