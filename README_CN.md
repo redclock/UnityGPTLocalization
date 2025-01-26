@@ -14,6 +14,11 @@
 2. __自定义翻译需求__：通过 String Table Metadata 的 Comment 为 GPT 额外提供翻译需求，控制翻译结果偏好。
 3. __迭代翻译结果__：对不满意的翻译结果可以随时删除，重新翻译。也可以单独指定翻译某一项。
 
+### 使用 DeepSeek API
+现在这个插件支持 DeepSeek API。
+你可以选择 OpenAI 或 DeepSeek 作为翻译服务提供商。 
+对于 DeepSeek，将 base URL 设置为 `https://api.deepseek.com` 并选择模型 `deepseek-chat` 或 `deepseek-reasoner`。
+
 ## 使用
 
 ### 安装插件
@@ -29,6 +34,9 @@
 
 ### 配置 OpenAI API Key
 * 到 https://platform.openai.com/api-keys 获取你的 API Key
+
+### 或者：配置 DeepSeek API Key
+* 到 https://platform.deepseek.com/api_keys 获取你的 API Key。
 
 ## 使用方法
 在 Unity 打开菜单 `Tools > GPT Localization`, 打开 GPT Localization 窗口。

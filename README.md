@@ -7,7 +7,7 @@ English | [简体中文](README_CN.md)
 This is a multilingual translation automation tool based on the 
 [Unity Localization plugin](https://docs.unity3d.com/Packages/com.unity.localization@1.0/manual/index.html) 
 and the [OpenAI API](https://openai.com/blog/openai-api). 
-This tool can automatically translate missing string entries in Unity Localization using OpenAI GPT, 
+This tool can automatically translate missing string entries in Unity Localization using OpenAI GPT or DeepSeek, 
 making multilingual support both simple and efficient.
 
 ![preview](Intro.gif)
@@ -16,6 +16,11 @@ making multilingual support both simple and efficient.
 1. **Integration with Unity Localization**: Automatically find untranslated items in the String Table Collection and sync the results back to the String Table.
 2. **Customize translation requirements**: Use the Comment in the String Table Metadata to provide additional translation requirements for GPT, controlling translation result preferences.
 3. **Iterate on translation results**: You can delete and retranslate unsatisfactory translation results at any time. You can also specify translation for a single item.
+
+### Using DeepSeek API
+Now this plugin supports DeepSeek API.
+You can choose OpenAI or DeepSeek as the translation service provider.
+For DeepSeek, set the base URL to `https://api.deepseek.com` and select model to `deepseek-chat` or `deepseek-reasoner`.
 
 ## Usage
 
@@ -33,17 +38,20 @@ making multilingual support both simple and efficient.
 ### Configuring the OpenAI API Key
 * Go to https://platform.openai.com/api-keys to get your API Key.
 
+### Or Configuring the DeepSeek API Key
+* Go to https://platform.deepseek.com/api_keys to get your API Key.
+
 ## How to Use
 Open the `Tools > GPT Localization` menu in Unity to open the GPT Localization window.
 
 ![Screenshot](Screenshot.png)
 
 ### 1. Fill in the GPT Model Parameters
-| Parameter    | Description                                                          |
-|--------------|----------------------------------------------------------------------|
-| Base Url     | Default is https://api.openai.com/v1, can also use other proxy URLs. |
-| API Key      | Your OpenAI API Key.                                                 |
-| Model        | Choose a GPT model, such as `gpt-3.5-turbo`, `gpt-4-turbo-preview`.  |
+| Parameter    | Description                                                                                                         |
+|--------------|---------------------------------------------------------------------------------------------------------------------|
+| Base Url     | Default is https://api.openai.com/v1, can also use other proxy URLs.                                                |
+| API Key      | Your OpenAI API Key.                                                                                                |
+| Model        | Choose a GPT model, such as `gpt-3.5-turbo`, `gpt-4-turbo-preview`.                                                 |
 | Temperature  | Controls the diversity of translation results, 0.0 for most accurate translation, 1.0 for most diverse translation. |
 
 ### 2. Select the String Table Collection
