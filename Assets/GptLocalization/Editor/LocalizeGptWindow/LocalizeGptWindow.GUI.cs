@@ -174,11 +174,11 @@ namespace RedGame.Framework.EditorTools
                     EditorGUI.indentLevel++;
                     EditorGUILayout.EndHorizontal();
                 }
-                int index = Array.IndexOf(_validModels, _model);
-                index = EditorGUILayout.Popup("Model", index, _validModels);
-                if (index >= 0 && index < _validModels.Length)
+                int index = Array.IndexOf(s_validModels, _model);
+                index = EditorGUILayout.Popup("Model", index, s_validModels);
+                if (index >= 0 && index < s_validModels.Length)
                 {
-                    _model = _validModels[index];
+                    _model = s_validModels[index];
                 }
             
                 _temperature = EditorGUILayout.Slider("Temperature", _temperature, 0, 1);
